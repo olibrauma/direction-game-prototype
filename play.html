@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Went West</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .grid-item {
+            text-align: center;
+        }
+
+        button {
+            padding: 40px;
+            font-size: 16px;
+        }
+
+        #button7,
+        #button9 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item"><span id="button1">0</span></div>
+        <div class="grid-item"><button id="button2" onclick="changeButtonText(this.textContent)">北</button></div>
+        <div class="grid-item"><span id="button3">10.00</span></div>
+        <div class="grid-item"><button id="button4" onclick="changeButtonText(this.textContent)">西</button></div>
+        <div class="grid-item"><button id="button5" onclick="startGame()">はじめる</button></div>
+        <div class="grid-item"><button id="button6" onclick="changeButtonText(this.textContent)">東</button></div>
+        <div class="grid-item"><span id="button7">Button 7</span></div>
+        <div class="grid-item"><button id="button8" onclick="changeButtonText(this.textContent)">南</button></div>
+        <div class="grid-item"><span id="button9">Button 9</span></div>
+    </div>
+
+    <script src="script.js"></script> <!-- JavaScriptファイルを読み込む -->
+</body>
+</html>
+
