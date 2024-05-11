@@ -59,7 +59,7 @@ function changeButtonText(clickedButtonText) {
             westButtonClickCount++;
             document.getElementById('button1').textContent = westButtonClickCount.toString();
             var increaseAmount = 1 / ((westButtonClickCount / 5) + 2) + 0.5;
-            increaseCountdown(increaseAmount); // 「西」のボタンが押されたらcountdownを増やす
+            increaseCountdown(increaseAmount);
         }
     }
 }
@@ -81,16 +81,16 @@ function startGame() {
                 clearInterval(countdownInterval);
                 button3Text.textContent = "10.00";
                 gameInProgress = false;
+                alert("おわり！" + westButtonClickCount + "回 西に進みました");
             }
         }, 10);
     }
 }
 
 function increaseCountdown(value) {
-    countdown += value; // 引数valueの値だけcountdownを増やす
+    countdown += value;
 }
 
 function decreaseCountdown() {
     countdown -= 1;
 }
-
